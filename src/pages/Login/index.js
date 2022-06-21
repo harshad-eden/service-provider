@@ -1,6 +1,7 @@
 import React from 'react';
 import styles from './index.module.css';
 import { Button, Form, Input } from 'antd';
+import { Link } from 'react-router-dom';
 
 const onFinish = (values) => {
   console.log('Success:', values);
@@ -30,7 +31,7 @@ const Login = () => {
           </Form.Item>
 
           <label className="label" htmlFor="username">
-            Username
+            Password
           </label>
           <Form.Item
             className="mbZero"
@@ -48,7 +49,9 @@ const Login = () => {
               size="large"
             />
           </Form.Item>
-          <span className={styles.forgottPassword}>Forgot Password</span>
+          <Link to="/" className={styles.forgottPassword}>
+            Forgot Password
+          </Link>
         </Form>
         <div className={styles.submitBtn}>
           <Button
