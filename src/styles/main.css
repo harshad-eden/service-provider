@@ -23,10 +23,10 @@ label {
 }
 
 .custom-ant-input {
-  border-radius: 12px !important;
-  height: 45px;
+  border-radius: 20px !important;
+  height: 50px;
 }
 
 .custom-ant-button {
-  height: 45px !important;
+  height: 50px !important;
 }

@@ -54,7 +54,7 @@ const Login = () => {
           <Button
             className="custom-ant-button"
             shape="round"
-            style={{ width: '88%' }}
+            style={{ width: '85%' }}
             size="large"
             type="primary"
             htmlType="submit"
