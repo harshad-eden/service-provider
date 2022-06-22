@@ -30,3 +30,15 @@ label {
 .custom-ant-button {
   height: 50px !important;
 }
+
+.importantIcon {
+  object-fit: contain;
+  width: 10px;
+  height: 17px;
+}
+
+.displayFlex {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}

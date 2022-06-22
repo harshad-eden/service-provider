@@ -1,7 +1,6 @@
 import React from 'react';
 import styles from './index.module.css';
 import { Button, Form, Input } from 'antd';
-import { Link } from 'react-router-dom';
 
 const Login = () => {
   const [form] = Form.useForm();
@@ -10,58 +9,52 @@ const Login = () => {
     console.log('Success:', values);
   };
 
+  const onFinishFailed = (errorInfo) => {
+    console.log('Failed:', errorInfo);
+  };
   return (
     <div className={styles.container}>
       <div className={styles.box}>
         <img src="icons/logo.png" className={styles.logo} />
-        <Form form={form} className="wFull" name="basic" onFinish={onFinish}>
-          <label htmlFor="username">Username</label>
+        <div className={styles.sectionTwo}>
+          <img src="/icons/important.png" className="importantIcon" />
+          <p>Kindly enter your email address below to enable us reset your password</p>
+        </div>
+        <Form
+          form={form}
+          className="wFull"
+          name="basic"
+          onFinish={onFinish}
+          onFinishFailed={onFinishFailed}
+        >
+          <label htmlFor="username">Enter Email Address</label>
           <Form.Item
             name="username"
             rules={[
               {
                 required: true,
-                message: 'Please input your username!',
+                message: 'Please input your email!',
               },
             ]}
           >
-            <Input placeholder="Enter your Username" className="custom-ant-input" size="large" />
-          </Form.Item>
-
-          <label className="label" htmlFor="username">
-            Password
-          </label>
-          <Form.Item
-            className="mbZero"
-            name="password"
-            rules={[
-              {
-                required: true,
-                message: 'Please input your password!',
-              },
-            ]}
-          >
-            <Input.Password
-              placeholder="Enter your Password"
+            <Input
+              placeholder="Enter your Email address"
               className="custom-ant-input"
               size="large"
             />
           </Form.Item>
-          <Link to="/reset-password" className={styles.forgottPassword}>
-            Forgot Password
-          </Link>
         </Form>
         <div className={styles.submitBtn}>
           <Button
-            onClick={() => form.submit()}
             className="custom-ant-button"
+            onClick={() => form.submit()}
             shape="round"
             style={{ width: '85%' }}
             size="large"
             type="primary"
             htmlType="submit"
           >
-            Login
+            Reset Password
           </Button>
         </div>
       </div>
