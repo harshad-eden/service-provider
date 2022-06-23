@@ -2,55 +2,64 @@
 import React from 'react';
 import { NavLink } from 'react-router-dom';
 import styles from './layout.module.css';
-import { MdOutlineDashboard } from 'react-icons/md';
-import { AiOutlineLogout } from 'react-icons/ai';
-import { BsBuilding } from 'react-icons/bs';
+
+const links = [
+  {
+    name: 'Dashboard',
+    path: '/',
+    icon: '/sidebarIcons/dashboard.png',
+    activeIcon: '/sidebarIcons/dashboardActive.png',
+  },
+  {
+    name: 'Pre-Auths',
+    path: '/pre-auth',
+    icon: '/sidebarIcons/fingerprint.png',
+    activeIcon: '/sidebarIcons/dashboardActive.png',
+  },
+  {
+    name: 'Patients',
+    path: '/patients',
+    icon: '/sidebarIcons/patient.png',
+    activeIcon: '/sidebarIcons/dashboardActive.png',
+  },
+  {
+    name: 'Claims',
+    path: '/claims',
+    icon: '/sidebarIcons/claim.png',
+    activeIcon: '/sidebarIcons/dashboardActive.png',
+  },
+  {
+    name: 'Payments',
+    path: '/payments',
+    icon: '/sidebarIcons/payment.png',
+    activeIcon: '/sidebarIcons/dashboardActive.png',
+  },
+  {
+    name: 'Reports',
+    path: '/reports',
+    icon: '/sidebarIcons/reports.png',
+    activeIcon: '/sidebarIcons/dashboardActive.png',
+  },
+];
 
 const SideBar = () => {
   return (
     <div className={styles.sideBar}>
       <img src="icons/logo.png" className={styles.logo} />
       <div className={styles.links}>
-        <NavLink
-          className={({ isActive }) => (isActive ? styles.linkItemActive : styles.linkItem)}
-          to={'/'}
-        >
-          <MdOutlineDashboard
-            size={22}
-            className={({ isActive }) => (isActive ? styles.iconsActive : styles.icons)}
-          />
-          <p>Dashboard</p>
-        </NavLink>
-        <NavLink
-          to={'/onboard'}
-          className={({ isActive }) => (isActive ? styles.linkItemActive : styles.linkItem)}
-        >
-          <BsBuilding
-            size={22}
-            className={({ isActive }) => (isActive ? styles.iconsActive : styles.icons)}
-          />
-          <p>Onboard</p>
-        </NavLink>
-        <NavLink
-          to={'/providers'}
-          className={({ isActive }) => (isActive ? styles.linkItemActive : styles.linkItem)}
-        >
-          <BsBuilding
-            size={22}
-            className={({ isActive }) => (isActive ? styles.iconsActive : styles.icons)}
-          />
-          <p>providers</p>
-        </NavLink>
-        <NavLink
-          to={'/logout'}
-          className={({ isActive }) => (isActive ? styles.linkItemActive : styles.linkItem)}
-        >
-          <AiOutlineLogout
-            size={22}
-            className={({ isActive }) => (isActive ? styles.iconsActive : styles.icons)}
-          />
-          <p>Logout</p>
-        </NavLink>
+        {links.map((item) => (
+          <NavLink
+            key={item.name}
+            className={({ isActive }) => (isActive ? styles.linkItemActive : styles.linkItem)}
+            to={item.path}
+          >
+            <img className={styles.sidebarIcon} src={item.icon} alt="" />
+            <img className={styles.sidebarIconActive} src={item.activeIcon} alt="" />
+
+            <p>{item.name}</p>
+            <div className={styles.bottomLine} />
+          </NavLink>
+        ))}
       </div>
     </div>
   );
