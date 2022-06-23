@@ -37,11 +37,7 @@ const Login = () => {
               },
             ]}
           >
-            <Input
-              placeholder="Enter your Email address"
-              className="custom-ant-input"
-              size="large"
-            />
+            <Input placeholder="Enter your Email address" className="customAntInput" size="large" />
           </Form.Item>
         </Form>
         <div className={styles.submitBtn}>

@@ -1,41 +1,68 @@
 import { Table } from 'antd';
+import styles from './index.module.css';
+import { HiOutlineDocumentText } from 'react-icons/hi';
 const columns = [
   {
     title: 'Member No',
-    dataIndex: 'name',
-    width: 150,
+    dataIndex: 'memberNumber',
+    width: 90,
   },
   {
     title: 'Names',
-    dataIndex: 'age',
-    width: 150,
+    dataIndex: 'names',
+    width: 100,
   },
   {
     title: 'Authority Processing',
-    dataIndex: 'address',
-  },
-  {
-    title: 'Documents',
-    dataIndex: 'age',
+    dataIndex: 'authorityProcessing',
     width: 150,
   },
   {
-    title: 'Status',
-    dataIndex: 'address',
+    title: 'Documents',
+    dataIndex: 'Documents',
+    width: 140,
+    render: (text) => (
+      <div style={{ display: 'flex' }}>
+        <div style={{ display: 'flex', alignItems: 'center' }}>
+          <HiOutlineDocumentText size={30} color="#f87d4e" />
+          <p style={{ fontSize: 8 }}>Request form</p>
+        </div>
+        <div style={{ display: 'flex', alignItems: 'center' }}>
+          <HiOutlineDocumentText size={30} color="#f87d4e" />
+          <p style={{ fontSize: 8 }}>Request form</p>
+        </div>
+      </div>
+    ),
   },
-  // {
-  //   title: 'Comment',
-  //   dataIndex: 'address',
-  // },
+  {
+    title: 'Status',
+    dataIndex: 'status',
+    render: (status) => (
+      <div style={{ display: 'flex', alignItems: 'center', gap: 5 }}>
+        <div className={styles.pinkRound}></div>
+        {status}
+      </div>
+    ),
+    width: 110,
+  },
+  {
+    title: 'Comment',
+    dataIndex: 'comment',
+    width: 130,
+  },
 ];
 const data = [];
 
 for (let i = 0; i < 100; i++) {
   data.push({
     key: i,
-    name: `Edward King ${i}`,
-    age: 32,
+    names: 'Jhon doe',
+    memberNumber: '#45454',
+    documents: [],
     address: 'London, Park Lane no',
+    authorityProcessing: 'Dorcas Nyangayi',
+    status: 'pending',
+    comment: 'lorem lipsul lorem lipsul lorem ',
   });
 }
 
@@ -45,7 +72,7 @@ const App = () => (
     dataSource={data}
     pagination={false}
     scroll={{
-      y: 164,
+      y: 200,
     }}
   />
 );

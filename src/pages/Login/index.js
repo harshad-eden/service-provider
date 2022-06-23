@@ -25,7 +25,7 @@ const Login = () => {
               },
             ]}
           >
-            <Input placeholder="Enter your Username" className="custom-ant-input" size="large" />
+            <Input placeholder="Enter your Username" className="customAntInput" size="large" />
           </Form.Item>
 
           <label className="label" htmlFor="username">
@@ -43,7 +43,7 @@ const Login = () => {
           >
             <Input.Password
               placeholder="Enter your Password"
-              className="custom-ant-input"
+              className="customAntInput"
               size="large"
             />
           </Form.Item>

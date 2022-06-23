@@ -18,6 +18,10 @@ label {
   width: 100%;
 }
 
+.wHalf {
+  width: 50%;
+}
+
 .mbZero {
   margin-bottom: 0px !important;
 }
@@ -26,7 +30,23 @@ label {
   margin-bottom: 5px !important;
 }
 
-.custom-ant-input {
+.mtLarge {
+  margin-top: 30px;
+}
+
+.mbLarge {
+  margin-bottom: 30px;
+}
+
+.mlLarge {
+  margin-left: 30px;
+}
+
+.mrLarge {
+  margin-right: 30px;
+}
+
+.customAntInput {
   border-radius: 22px !important;
   height: 50px;
 }
@@ -42,15 +62,36 @@ label {
   margin-right: 3px;
 }
 
-.displayFlex {
+.dfaCenter {
   display: flex;
   align-items: center;
   justify-content: center;
 }
 
-.displayGrid {
+.dfsBetween {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.dGrid {
   display: grid;
   place-items: center;
+}
+
+.addBox {
+  display: flex;
+  align-items: center;
+  cursor: pointer;
+}
+
+.addBoxwhite {
+  display: grid;
+  place-items: center;
+  width: 170px;
+  height: 40px;
+  color: black;
+  background-color: #fff;
 }
 
 .ant-tabs-top > .ant-tabs-nav::before {
@@ -73,12 +114,12 @@ label {
   padding-bottom: 6px !important;
 }
 
+.ant-table-cell {
+  font-size: 13px !important;
+}
+
 .ant-table-thead
   > tr
   > th:not(:last-child):not(.ant-table-selection-column):not(.ant-table-row-expand-icon-cell):not([colspan])::before {
   background-color: white !important;
-}
-
-.ant-input-affix-wrapper {
-  border: none !important;
 }
