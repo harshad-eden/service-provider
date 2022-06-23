@@ -10,12 +10,12 @@ const columns = [
   {
     title: 'Names',
     dataIndex: 'names',
-    width: 100,
+    width: 80,
   },
   {
     title: 'Authority Processing',
     dataIndex: 'authorityProcessing',
-    width: 150,
+    width: 148,
   },
   {
     title: 'Documents',
@@ -43,12 +43,12 @@ const columns = [
         {status}
       </div>
     ),
-    width: 110,
+    width: 100,
   },
   {
     title: 'Comment',
     dataIndex: 'comment',
-    width: 130,
+    width: 127,
   },
 ];
 const data = [];
