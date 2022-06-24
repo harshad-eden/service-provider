@@ -12,9 +12,9 @@ const links = [
   },
   {
     name: 'Pre-Auths',
-    path: '/pre-auth',
+    path: '/pre-auths',
     icon: '/sidebarIcons/fingerprint.png',
-    activeIcon: '/sidebarIcons/dashboardActive.png',
+    activeIcon: '/sidebarIcons/fingerprintActive.png',
   },
   {
     name: 'Patients',
