@@ -16,12 +16,13 @@ const Index = () => {
   return (
     <Main>
       <div style={{ marginTop: 20 }}>
-        <div style={{ width: '30%' }}>
+        <div style={{ width: '30%', display: 'flex', alignItems: 'center', gap: 12 }}>
           <Input
             size="large"
             style={{ border: 'none', borderRadius: 20 }}
             prefix={<SearchOutlined className={styles.searchIcon} />}
           />
+          <img src="/icons/filter.png" alt="" style={{ height: 35 }} />
         </div>
         <div style={{ display: 'flex', justifyContent: 'flex-end' }}>
           <AddBox value="New Pre-Auth" />
