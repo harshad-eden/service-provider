@@ -1,6 +1,7 @@
 import { Table } from 'antd';
 import styles from './index.module.css';
 import { HiOutlineDocumentText } from 'react-icons/hi';
+import { Link } from 'react-router-dom';
 const columns = [
   {
     title: 'Member No',

@@ -1,6 +1,7 @@
 import { Table } from 'antd';
 import styles from './index.module.css';
 import { HiOutlineDocumentText } from 'react-icons/hi';
+import { Link } from 'react-router-dom';
 const columns = [
   {
     title: 'Trans No',
@@ -35,17 +36,23 @@ const columns = [
   {
     title: 'Documents',
     dataIndex: 'Documents',
-    width: 140,
+    width: 180,
     render: (text) => (
-      <div style={{ display: 'flex' }}>
-        <div style={{ display: 'flex', alignItems: 'center' }}>
+      <div style={{ display: 'flex', alignItems: 'center' }}>
+        <div style={{ display: 'flex', alignItems: 'center', width: 80 }}>
           <HiOutlineDocumentText size={30} color="#f87d4e" />
-          <p style={{ fontSize: 8 }}>Request form</p>
+          <p style={{ fontSize: 8, marginBottom: 0 }}>Request form</p>
         </div>
-        <div style={{ display: 'flex', alignItems: 'center' }}>
+        <div style={{ display: 'flex', alignItems: 'center', width: 80 }}>
           <HiOutlineDocumentText size={30} color="#f87d4e" />
-          <p style={{ fontSize: 8 }}>Request form</p>
+          <p style={{ fontSize: 8, marginBottom: 0 }}>Request form</p>
         </div>
+        <Link
+          style={{ fontSize: 10, fontWeight: 10, textDecoration: 'underline', color: '#f87d4e' }}
+          to={'/'}
+        >
+          View all
+        </Link>
       </div>
     ),
   },

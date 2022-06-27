@@ -1,3 +1,10 @@
 .table {
   margin-top: 10px;
 }
+
+.pinkRound {
+  width: 10px;
+  height: 10px;
+  border-radius: 5px;
+  background-color: #e00a65;
+}
