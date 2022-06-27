@@ -9,11 +9,12 @@ import { HiOutlineDocumentText } from 'react-icons/hi';
 const Index = () => {
   return (
     <Main>
-      <Link to={'/pre-auth'}></Link>
-      <div style={{ display: 'flex', alignItems: 'center', gap: 20, marginBottom: 40 }}>
-        <HiOutlineArrowLeft size={30} />
-        <h3 style={{ marginBottom: 0, fontWeight: 700 }}>Pre-auths</h3>
-      </div>
+      <Link to={'/pre-auths'}>
+        <div style={{ display: 'flex', alignItems: 'center', gap: 20, marginBottom: 40 }}>
+          <HiOutlineArrowLeft size={30} />
+          <h3 style={{ marginBottom: 0, fontWeight: 700 }}>Pre-auths</h3>
+        </div>
+      </Link>
       <div style={{ width: '90%', margin: 'auto' }}>
         <div style={{ marginBottom: 60 }}>
           <p style={{ marginBottom: 5, color: '#3eb919', fontWeight: 700 }}>Patient</p>

@@ -2,7 +2,7 @@ import { Table } from 'antd';
 import styles from './index.module.css';
 import { HiOutlineDocumentText } from 'react-icons/hi';
 import { AiFillCaretDown } from 'react-icons/ai';
-import { Link } from 'react-router-dom';
+import { Link, useNavigate } from 'react-router-dom';
 import Dropdown from './DropDown';
 
 const columns = [
@@ -108,6 +108,20 @@ for (let i = 0; i < 5; i++) {
   });
 }
 
-const AntTable = () => <Table columns={columns} dataSource={data} pagination={false} />;
+const AntTable = () => {
+  const navigate = useNavigate();
+  return (
+    <Table
+      onRow={(record, rowIndex) => {
+        return {
+          onClick: (e) => navigate('/pre-auths/patient'),
+        };
+      }}
+      columns={columns}
+      dataSource={data}
+      pagination={false}
+    />
+  );
+};
 
 export default AntTable;
