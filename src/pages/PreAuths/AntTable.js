@@ -1,7 +1,10 @@
 import { Table } from 'antd';
 import styles from './index.module.css';
 import { HiOutlineDocumentText } from 'react-icons/hi';
+import { AiFillCaretDown } from 'react-icons/ai';
 import { Link } from 'react-router-dom';
+import Dropdown from './DropDown';
+
 const columns = [
   {
     title: 'Trans No',
@@ -26,7 +29,20 @@ const columns = [
   {
     title: 'Department',
     dataIndex: 'department',
-    width: 90,
+    width: 70,
+    // filters: [
+    //   {
+    //     text: <span>London</span>,
+    //     value: 'Marketing',
+    //   },
+    //   {
+    //     text: <span>New York</span>,
+    //     value: 'New York',
+    //   },
+    // ],
+    // filterDropdown: (props) => <Dropdown />,
+    // onFilter: (value, record) => record.address.startsWith(value),
+    // filterIcon: (filtered) => <AiFillCaretDown type="filter" style={{ color: '#f87d4e' }} />,
   },
   {
     title: 'Claim No',
@@ -39,11 +55,11 @@ const columns = [
     width: 180,
     render: (text) => (
       <div style={{ display: 'flex', alignItems: 'center' }}>
-        <div style={{ display: 'flex', alignItems: 'center', width: 80 }}>
+        <div style={{ display: 'flex', alignItems: 'center', width: 70 }}>
           <HiOutlineDocumentText size={30} color="#f87d4e" />
           <p style={{ fontSize: 8, marginBottom: 0 }}>Request form</p>
         </div>
-        <div style={{ display: 'flex', alignItems: 'center', width: 80 }}>
+        <div style={{ display: 'flex', alignItems: 'center', width: 70 }}>
           <HiOutlineDocumentText size={30} color="#f87d4e" />
           <p style={{ fontSize: 8, marginBottom: 0 }}>Request form</p>
         </div>
@@ -75,7 +91,7 @@ const columns = [
 ];
 const data = [];
 
-for (let i = 0; i < 6; i++) {
+for (let i = 0; i < 5; i++) {
   data.push({
     key: i,
     names: 'Jhon doe',

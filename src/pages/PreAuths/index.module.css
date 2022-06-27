@@ -8,3 +8,17 @@
   border-radius: 5px;
   background-color: #e00a65;
 }
+
+.greenRound {
+  width: 10px;
+  height: 10px;
+  border-radius: 5px;
+  background-color: green;
+}
+
+.voiletRound {
+  width: 10px;
+  height: 10px;
+  border-radius: 5px;
+  background-color: violet;
+}

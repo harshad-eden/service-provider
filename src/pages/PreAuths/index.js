@@ -3,6 +3,7 @@ import Main from '../../components/Layout';
 import TopNav from '../../components/Common/TopNav';
 import styles from './index.module.css';
 import AntTable from './AntTable';
+// import Iest from './Test';
 
 import { Input } from 'antd';
 import { SearchOutlined } from '@ant-design/icons';
@@ -10,7 +11,6 @@ import { SearchOutlined } from '@ant-design/icons';
 // import TabMenu from './TabMenu';
 import AddBox from '../../components/Common/AddBox';
 import { Pagination } from 'antd';
-import CustomTable from './CustomTable';
 
 const Index = () => {
   return (
@@ -36,7 +36,7 @@ const Index = () => {
 
         <div className={styles.table}>
           <AntTable />
-          {/* <CustomTable /> */}
+          {/* <Iest /> */}
         </div>
         <div style={{ marginTop: 30, display: 'flex', justifyContent: 'center' }}>
           <Pagination size="small" total={50} />
