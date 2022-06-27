@@ -15,7 +15,7 @@ const Index = () => {
         <h3 style={{ marginBottom: 0, fontWeight: 700 }}>Pre-auths</h3>
       </div>
       <div style={{ width: '90%', margin: 'auto' }}>
-        <div style={{ marginBottom: 90 }}>
+        <div style={{ marginBottom: 60 }}>
           <p style={{ marginBottom: 5, color: '#3eb919', fontWeight: 700 }}>Patient</p>
           <div
             style={{
@@ -120,7 +120,7 @@ const Index = () => {
                 <div />
               </div>
             </div>
-            <div style={{ flex: 1 }}>
+            <div style={{ flex: 1, marginRight: 47 }}>
               <BsChevronDown style={{ color: '#3eb919' }} size={30} />
               <div>
                 <h3 style={{ fontSize: 13, paddingTop: 5, fontWeight: 700 }}>12th Jan 2022</h3>
