@@ -1,5 +1,5 @@
 import React from 'react';
-import Main from '../../components/layout';
+import Main from '../../components/Layout';
 import TopNav from '../../components/Common/TopNav';
 import styles from './index.module.css';
 import AntTable from './AntTable';

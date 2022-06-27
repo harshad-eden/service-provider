@@ -87,16 +87,26 @@ for (let i = 0; i < 6; i++) {
 }
 
 const CustomTable = () => {
-  return data.map((item, index) => (
-    <div key={index}>
-      <div style={{ display: 'flex', justifyContent: 'space-between' }}>
-        {columns.map(({ title }) => (
-          <h5 key={title}>{title}</h5>
+  return (
+    <div>
+      <div className="tHead">
+        <div style={{ display: 'flex', justifyContent: 'space-between' }}>
+          {columns.map(({ title }) => (
+            <h5 key={title}>{title}</h5>
+          ))}
+        </div>
+      </div>
+
+      <div>
+        {data.map((item, index) => (
+          <div key={index}>
+            <p>{item.names}</p>
+            <p>{item.memberNumber}</p>
+          </div>
         ))}
       </div>
-      <Divider />
     </div>
-  ));
+  );
 };
 
 export default CustomTable;

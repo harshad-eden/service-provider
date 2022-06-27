@@ -155,9 +155,13 @@ label {
   font-size: 12px !important;
 }
 
-.topNav {
-}
-
 .activeTopNavLi {
   border-bottom: #f87d4e 3px solid;
+}
+
+.PreAuths_table__eZldm tr:nth-child(even) {
+  background: white;
+}
+.PreAuths_table__eZldm tr:nth-child(odd) {
+  background: #f8f8f8;
 }
